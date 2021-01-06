@@ -1,7 +1,7 @@
 {
-    "full_name": "Cameron Palmer",
-    "email": "palmercd@nih.gov",
-    "username": "palmercd",
+    "full_name": "Your Name",
+    "email": "your.email@provider.com",
+    "username": "username",
     "project_name": "Empty C++ Project",
     "repo_name": "empty_cxx_project",
     "repo_capitalized": "{{ cookiecutter.repo_name.upper() }}",
