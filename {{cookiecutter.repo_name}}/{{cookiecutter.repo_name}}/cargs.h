@@ -10,15 +10,15 @@
  https://www.boost.org/doc/libs/1_70_0/doc/html/program_options/tutorial.html#id-1.3.32.4.3
  */
 
-#ifndef COMBINE_CATEGORICAL_RUNS_CARGS_H_
-#define COMBINE_CATEGORICAL_RUNS_CARGS_H_
+#ifndef {{ cookiecutter.repo_capitalized }}_CARGS_H_
+#define {{ cookiecutter.repo_capitalized }}_CARGS_H_
 
 #include <stdexcept>
 #include <string>
 #include <vector>
 #include "boost/program_options.hpp"
 
-namespace combine_categorical_runs {
+namespace {{ cookiecutter.repo_name }} {
 /*!
   \class cargs
   \brief command line argument parser using boost::program_options
@@ -283,6 +283,6 @@ class cargs {
   boost::program_options::variables_map
       _vm;  //!< storage of parsed command line settings
 };
-}  // namespace combine_categorical_runs
+}  // namespace {{ cookiecutter.repo_name }}
 
-#endif  // COMBINE_CATEGORICAL_RUNS_CARGS_H_
+#endif  // {{ cookiecutter.repo_capitalized }}_CARGS_H_

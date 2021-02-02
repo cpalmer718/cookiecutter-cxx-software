@@ -5,9 +5,9 @@
   Copyright 2021 Cameron Palmer
 */
 
-#include "combine_categorical_runs/cargs.h"
+#include "{{ cookiecutter.repo_name }}/cargs.h"
 
-void combine_categorical_runs::cargs::initialize_options() {
+void {{ cookiecutter.repo_name }}::cargs::initialize_options() {
   _desc.add_options()("help,h", "emit this help message")(
       "output-prefix,o",
       boost::program_options::value<std::string>()->default_value("out"),

@@ -1,2 +1,0 @@
-{{ cookiecutter.full_name }}: all library development
-{%- if cookiecutter.full_name != "Cameron Palmer" %}Cameron Palmer: cookiecutter template{%- endif %}

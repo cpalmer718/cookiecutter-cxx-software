@@ -32,7 +32,7 @@ AC_PROG_CXX_C_O
 #	    [AX_PTHREAD]) #([CFLAGS=$CFLAGS $PTHREAD_CFLAGS])
 #fi
 
-#AX_CXX_COMPILE_STDCXX_11([ext], [optional])
+AX_CXX_COMPILE_STDCXX_17([ext], [mandatory])
 
 # Checks for libraries.
 
@@ -52,14 +52,6 @@ AX_BOOST_PROGRAM_OPTIONS
 AX_BOOST_IOSTREAMS
 {%- endif %}
 
-{%- if cookiecutter.include_finter == "yes" %}
-AX_CHECK_ZLIB
-{%- endif %}
-
-{%- if cookiecutter.include_finter == "yes" %}
-AX_CHECK_BZIP2
-{%- endif %}
-
 AC_CHECK_LIB([m],[cos])
 
 # Checks for header files.
@@ -72,9 +64,5 @@ AC_CONFIG_FILES([
  Makefile
  {{ cookiecutter.repo_name }}-{{ cookiecutter.version }}.pc
 ])
-
-{%- if cookiecutter.include_finter == "yes" %}
-AC_CONFIG_SUBDIRS([finter])
-{%- endif %}
 
 AC_OUTPUT
